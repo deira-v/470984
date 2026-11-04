@@ -17,13 +17,14 @@ import java.math.BigDecimal;
 @Table(name = "bookings")
 public class Booking {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long bookingId;
+    private Long id;
     @NotBlank
     @Size(min = 2, max = 60)
-    private String organizer;
+    private String organizerName;
     @Positive
-    private BigDecimal count;
+    private BigDecimal attendeeCount;
 
-    private boolean status;
+    private String status;
+
+
 }

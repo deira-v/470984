@@ -2,6 +2,8 @@ package ie.atu.sample.controller;
 
 import ie.atu.sample.model.Room;
 import ie.atu.sample.repository.RoomRepository;
+import org.apache.catalina.filters.ExpiresFilter;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,4 +22,8 @@ public class RoomController {
     public List<Room> getRooms() {
         return roomRepository.findAll();
     }
+
+
+
+
 }
